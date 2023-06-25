@@ -19,6 +19,14 @@ window.addEventListener("scroll", function () {
     }
   }
 });
+document
+  .querySelectorAll("body > header > div > nav > ul > li")
+  .forEach((e) => {
+    e.addEventListener("click", () => {
+      document.querySelector(".menu").classList.replace("fa-xmark", "fa-bars");
+      document.querySelector("header nav ul").classList.toggle("show");
+    });
+  });
 //loader================================================
 window.addEventListener("load", () => {
   document.querySelector(".loader").style.display = "none";
